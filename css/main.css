@@ -100,7 +100,7 @@ h1, h2, h3, p {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: calc(1.5vw + 1rem);
   letter-spacing: 2px;
 }
 
@@ -122,6 +122,20 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .wrapper {
+    width: 90%;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 95%;
+    padding-top: 1rem;
+  }
+}
+
 .menu {
   width: 100%;
   background-color: #fff2D9;
@@ -129,7 +143,6 @@ body {
 }
 
 .menu header {
-  width: 100%;
   text-align: center;
 }
 
@@ -137,22 +150,23 @@ body {
   color: #a41a17;
   font-family: "Slackey", sans-serif;
   text-shadow: #4b0c0a 0.01em 0.01em 0, #4b0c0a 0.02em 0.02em 0, #4b0c0a 0.03em 0.03em 0, #4b0c0a 0.04em 0.04em 0, #4b0c0a 0.05em 0.05em 0, #4b0c0a 0.06em 0.06em 0, #4b0c0a 0.07em 0.07em 0, #4b0c0a 0.08em 0.08em 0, #4b0c0a 0.09em 0.09em 0, #4b0c0a 0.1em 0.1em 0;
-  font-size: 7em;
-  padding: 2rem 0;
+  font-size: calc(6vw + 2rem);
+  line-height: 1;
+  padding: 1rem;
 }
 
 .menu .subHeader {
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   padding-top: 0;
   color: #fff2D9;
   color: #C61A18;
   border-bottom: 1rem solid #C61A18;
-  font-size: 2rem;
+  font-size: calc(1vw + 1rem);
   font-family: "Lato", sans-serif;
 }
 
 .menu .subHeader p {
-  font-size: 1.5rem;
+  font-size: calc(0.75rem + 0.75vw);
 }
 
 .wrapper__box {
@@ -182,35 +196,39 @@ body {
   width: 100%;
 }
 
+@media (max-width: 800px) {
+  .ingredients__box .ingredients__box--pictures {
+    width: 29%;
+    margin: 1%;
+  }
+}
+
 .messageBox {
   padding: 1.5rem 0;
   text-align: center;
   color: #fff2D9;
   font-family: "Lato", sans-serif;
-  font-size: 2rem;
+  font-size: calc(1rem + 1vw);
   background-color: #003200;
   width: 50%;
   box-shadow: 0 0.4rem 1rem 0 rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .messageBox h4 {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  font-size: 3rem;
-  transform: rotate(-3deg) translateX(-50%);
+  font-size: calc(1rem + 2vw);
+  transform: rotate(-3deg);
   font-family: "Conv_DJB Chalk It Up", sans-serif;
   color: white;
+  margin-top: 15%;
 }
 
 .messageBox ul {
   margin: 0;
   padding: 3% 0;
   -moz-column-count: 2;
-  -moz-column-gap: 30%;
+  -moz-column-gap: 75px;
   -webkit-column-count: 2;
-  -webkit-column-gap: 30%;
+  -webkit-column-gap: 75px;
   column-count: 2;
   column-gap: 75px;
   list-style-type: none;
@@ -218,9 +236,17 @@ body {
 
 .messageBox ul li {
   text-align: left;
-  font-size: 2rem;
+  font-size: calc(1rem + 0.5vw);
   font-family: "Conv_DJB Chalk It Up", sans-serif;
   color: white;
+}
+
+@media (max-width: 800px) {
+  .messageBox ul {
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+  }
 }
 
 .noIngredients {
@@ -233,7 +259,7 @@ body {
   text-align: center;
   color: #fff2D9;
   font-family: "Lato", sans-serif;
-  font-size: 2rem;
+  font-size: calc(1rem + 1vw);
   background-color: #C61A18;
   box-shadow: 0 -0.4rem 1rem 0 rgba(0, 0, 0, 0.2);
 }

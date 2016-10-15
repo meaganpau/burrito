@@ -128,7 +128,7 @@ h1, h2, h3, p {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: calc(1.5vw + 1rem);
     letter-spacing:2px;
 }
 
@@ -137,61 +137,67 @@ input {
 }
 
 body {
-        background-image:url('../img/background.jpg');
-        background-attachment:fixed;
-        background-size:cover;
-        width:100%;
-    }
+    background-image:url('../img/background.jpg');
+    background-attachment:fixed;
+    background-size:cover;
+    width:100%;
+}
 
 .wrapper {
-        padding-top: 4rem;
-        width:85%;
-        max-width:1280px;
-        margin:0 auto;
-        
-        }
-.menu {
-        width:100%;
-        background-color: $color-bk-main;
+    padding-top: 4rem;
+    width:85%;
+    max-width:1280px;
+    margin:0 auto;
+}
 
-        box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.2);
-        
-        header{
-            width:100%;
-            text-align:center;
-            h1{color:$color-logo;
-                font-family:$font-logo;
-                text-shadow: $color-logo-shadow .01em .01em 0, $color-logo-shadow .02em .02em 0, $color-logo-shadow .03em .03em 0, $color-logo-shadow .04em .04em 0, $color-logo-shadow .05em .05em 0, $color-logo-shadow .06em .06em 0, $color-logo-shadow .07em .07em 0, $color-logo-shadow .08em .08em 0, $color-logo-shadow .09em .09em 0, $color-logo-shadow .1em .1em 0;
-                font-size:7em;
-                padding:2rem 0;
-            }
+@media (max-width: 900px) {
+    .wrapper {
+        width: 90%;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+        padding-top: 1rem;
+    }
+}
+
+.menu {
+    width:100%;
+    background-color: $color-bk-main;
+    box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.2);
+    header {
+        text-align:center;
+        h1 {
+            color:$color-logo;
+            font-family:$font-logo;
+            text-shadow: $color-logo-shadow .01em .01em 0, $color-logo-shadow .02em .02em 0, $color-logo-shadow .03em .03em 0, $color-logo-shadow .04em .04em 0, $color-logo-shadow .05em .05em 0, $color-logo-shadow .06em .06em 0, $color-logo-shadow .07em .07em 0, $color-logo-shadow .08em .08em 0, $color-logo-shadow .09em .09em 0, $color-logo-shadow .1em .1em 0;
+            font-size: calc(6vw + 2rem);
+            line-height: 1;
+            padding: 1rem;
         }
-        .subHeader {
-            padding:1.5rem 0;
-            padding-top:0;
-            // width:70%;
-            // background-color:$color-bk-secondary;
-            // border-radius:10px;
-            // margin:10px auto;
-            color: $color-text-secondary;
-            color: $color-bk-secondary;
-            border-bottom:1rem solid  $color-bk-secondary; 
-            // text-transform:uppercase;
-            font-size:2rem;
-            // border-top:.5rem solid silver;
-            font-family:$font-sub;
-            // box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.2), 0 -0.4rem 1rem 0 rgba(0,0,0,.2);
-            p {
-                font-size: 1.5rem;
-            }
+    }
+    .subHeader {
+        padding:1.5rem;
+        padding-top:0;
+        color: $color-text-secondary;
+        color: $color-bk-secondary;
+        border-bottom:1rem solid  $color-bk-secondary; 
+        font-size: calc(1vw + 1rem);
+        font-family:$font-sub;
+        p {
+            font-size: calc(0.75rem + 0.75vw);
         }
+    }
 }
 
 .wrapper__box {
     display:flex;
 }
 
-.ingredients__box{
+.ingredients__box {
     padding-right: 0.5rem;
     padding-top: 0.5rem;
     display:flex;
@@ -202,68 +208,65 @@ body {
     border-bottom: 1rem solid rgb(0,50,0);
     border-top: 1rem solid rgb(0,50,0);
     border-left: 1rem solid rgb(0,50,0);
-
-
-
-    .ingredients__box--pictures{
+    .ingredients__box--pictures {
         width:20%;
         margin:1%;
         border-radius:50%;
-        
-    img {
-        width:100%;
+        img {
+            width:100%;
         }
+    }
+}
 
+@media (max-width: 800px) {
+    .ingredients__box .ingredients__box--pictures {
+        width: 29%;
+        margin:1%;
     }
 }
 
 .messageBox {
-            padding:1.5rem 0;
-            text-align:center;
-            color:$color-text-secondary;
-            font-family: $font-sub;
-            font-size:2rem;
-            background-color:rgb(0,50,0);
-            width:50%;
-            
-            box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.2);
-            position: relative;
-            h4 { //Invitation text
-                position: absolute;
-                left: 50%;
-                top: 30%;
-                font-size: 3rem;
-                transform: rotate(-3deg) translateX(-50%);
-                font-family: $font-chalk;
-                color: white;
-                
-            }
-            
-            ul{
-                margin:0;
-                padding:3% 0;
-                -moz-column-count: 2;
-                -moz-column-gap: 30%;
-                -webkit-column-count: 2;
-                -webkit-column-gap: 30%;
-                column-count: 2;
-                column-gap: 75px;
-                list-style-type:none;
-                
-                li{text-align:left;
-                  font-size:2rem;
-                  font-family: $font-chalk;
-                  color: white;
-                  
+    padding:1.5rem 0;
+    text-align:center;
+    color:$color-text-secondary;
+    font-family: $font-sub;
+    font-size: calc(1rem + 1vw);
+    background-color:rgb(0,50,0);
+    width:50%;
+    box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.2);
+    h4 { //Invitation text
+        font-size: calc(1rem + 2vw);
+        transform: rotate(-3deg);
+        font-family: $font-chalk;
+        color: white;
+        margin-top: 15%;
+    }
+    ul {
+        margin:0;
+        padding:3% 0;
+        -moz-column-count: 2;
+        -moz-column-gap: 75px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 75px;
+        column-count: 2;
+        column-gap: 75px;
+        list-style-type:none;
+        li {
+            text-align:left;
+            font-size: calc(1rem + 0.5vw);
+            font-family: $font-chalk;
+            color: white;
+        }
+    }
+}
 
-
-                }
-
-
-            }
-
-            }
-
+@media (max-width: 800px) {
+    .messageBox ul {
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
 
 
 .noIngredients {
@@ -276,24 +279,47 @@ body {
     text-align:center;
     color:$color-bk-main;
     font-family: $font-sub;
-    font-size:2rem;
+    font-size: calc(1rem + 1vw);
     background-color:$color-bk-secondary;
     box-shadow: 0 -.4rem 1rem 0 rgba(0,0,0,.2);
 }
 
-.tortilla {background-color: $color-bk-blue;}
-.beef {background-color: $color-bk-green; }
-.salsa {background-color: $color-bk-purple; }
-.guacamole {background-color: $color-bk-yellow; }
-.lettuce {background-color: $color-bk-purple; }
-.cheese {background-color: $color-bk-blue; }
-.sourCream {background-color: $color-bk-yellow; }
-.hotSauce {background-color: $color-bk-green; }
-.beans {background-color: $color-bk-green; }
-.rice  {background-color: $color-bk-blue;}
-.lime {background-color: $color-bk-yellow; }
-.tomato {background-color: $color-bk-purple; }
-
+.tortilla {
+    background-color: $color-bk-blue;
+}
+.beef {
+    background-color: $color-bk-green; 
+}
+.salsa {
+    background-color: $color-bk-purple; 
+}
+.guacamole {
+    background-color: $color-bk-yellow; 
+}
+.lettuce {
+    background-color: $color-bk-purple; 
+}
+.cheese {
+    background-color: $color-bk-blue; 
+}
+.sourCream {
+    background-color: $color-bk-yellow; 
+}
+.hotSauce {
+    background-color: $color-bk-green; 
+}
+.beans {
+    background-color: $color-bk-green; 
+}
+.rice  {
+    background-color: $color-bk-blue;
+}
+.lime {
+    background-color: $color-bk-yellow; 
+}
+.tomato {
+    background-color: $color-bk-purple; 
+}
 
 footer {
     text-align: center;
