@@ -224,7 +224,7 @@ body {
 
 .messageBox ul {
   margin: 0;
-  padding: 3% 0;
+  padding: 5%;
   -moz-column-count: 2;
   -moz-column-gap: 75px;
   -webkit-column-count: 2;
