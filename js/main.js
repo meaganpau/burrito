@@ -86,29 +86,23 @@ var burrito = {
 function updateView() {
 	var htmlList="";
 
-	
-
 	if (burrito.ingredientsList.length === 0) {
 		$('.invitation').fadeIn();
 	} else {
-		
+		$('.invitation').hide();	
 		for (var item in burrito.ingredientsList){
 			htmlList = htmlList + '<li>'+ burrito.ingredientsList[item] +'</li>';
 		}
-
-
 	}
 	
 	$('.ingredientsList').html(htmlList);
 	$('.calorieMeter').text(burrito.burritoCalories);
-	
 
 };
 
 updateView();
 
 $('.ingredient').change(function() {
-	$('.invitation').fadeOut();
 	var selectedIngredient = $(this).val();
 	if (this.checked){
 		burrito.addIngredient(selectedIngredient);

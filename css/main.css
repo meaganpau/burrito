@@ -236,7 +236,7 @@ body {
 
 .messageBox ul li {
   text-align: left;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.85rem + 0.5vw);
   font-family: "Conv_DJB Chalk It Up", sans-serif;
   color: white;
 }
