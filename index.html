@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Burrito Tinder</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,11 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
+        
+        <link rel="stylesheet" href="css/themes/tooltipster-sideTip-noir.min.css">
+        <link rel="stylesheet" href="css/tooltipster.core.css">
+        <link rel="stylesheet" href="css/tooltipster.bundle.css">
+        <script src="https://use.fontawesome.com/1e7db2f15d.js"></script>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -33,75 +38,88 @@
                 </header>
                 <div class="wrapper__box">
                     <section class="ingredients__box">
+                        
                          <label for="tortilla">
-                            <div class="ingredients__box--pictures tortilla">
+                            <div class="ingredients__box--pictures tortilla tooltip" title="Fresh Tortilla!">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="tortilla" id="tortilla">
                                 <img src="img/tortilla.png" alt="tortilla image">
                              </div>
                         </label>
                         
                         <label for="beef">
-                            <div class="ingredients__box--pictures beef">
+                            <div class="ingredients__box--pictures beef tooltip" title="Add Some Beef!">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="beef" id="beef">
-                                <img src="img/beef.png" alt="beef image">
+                                <img src="img/beef.png" alt="beef image"">
                             </div>
                         </label>
                          <label for="salsa">
-                            <div class="ingredients__box--pictures salsa">
+                            <div class="ingredients__box--pictures salsa tooltip" title="Salsa?">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="salsa" id="salsa">
                                 <img src="img/salsa.png" alt="salsa image">
                             </div>
                         </label>
                         <label for="guacamole">
-                            <div class="ingredients__box--pictures guacamole">
+                            <div class="ingredients__box--pictures guacamole tooltip" title="Try the guacamole!">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="guacamole" id="guacamole">
                                 <img src="img/guacamole.png" alt="guacamole image">
                             </div>
                         </label>
                         <label for="lettuce">
-                            <div class="ingredients__box--pictures lettuce">
+                            <div class="ingredients__box--pictures lettuce tooltip" title="Lettuce is just a filler.">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="lettuce" id="lettuce">
                                <img src="img/lettuce.png" alt="lettuce image">
                             </div>
                         </label>
                         <label for="cheese">
-                            <div class="ingredients__box--pictures cheese">
+                            <div class="ingredients__box--pictures cheese tooltip" title="Cheese! So good!">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="cheese" id="cheese">
                                 <img src="img/cheese.png" alt="cheese image">
                             </div>
                         </label>
                         <label for="sourCream">
-                            <div class="ingredients__box--pictures sourCream">
+                            <div class="ingredients__box--pictures sourCream tooltip" title="Sour Cream.  Try it.">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="sourCream" id="sourCream">
                                 <img src="img/sourCream.png" alt="sour cream image">
                         </div>
                         </label>
                        <label for="beans">
-                            <div class="ingredients__box--pictures beans">
+                            <div class="ingredients__box--pictures beans tooltip" title="These are beans.">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="beans" id="beans">
                                 <img src="img/beans.png" alt="hot sauce image">
                             </div>
                         </label>
                         <label for="rice">
-                            <div class="ingredients__box--pictures rice">
+                            <div class="ingredients__box--pictures rice tooltip" title="Rice?">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="rice" id="rice">
                                 <img src="img/rice.png" alt="sour cream image">
                             </div>
                         </label>
                         <label for="hotSauce">
-                            <div class="ingredients__box--pictures hotSauce">
+                            <div class="ingredients__box--pictures hotSauce tooltip" title="Hot Sauce.  Caution - very hot.">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="hotSauce" id="hotSauce">
                                 <img src="img/hotSauce-flame.png" alt="hot sauce image">
                             </div>
                         </label>
                         <label for="tomato">
-                            <div class="ingredients__box--pictures tomato">
+                            <div class="ingredients__box--pictures tomato tooltip" title="Tomato... a classic">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="tomato" id="tomato">
                                 <img src="img/tomato.png" alt="hot sauce image">
                             </div>
                         </label>
                         <label for="lime">
-                            <div class="ingredients__box--pictures lime">
+                            <div class="ingredients__box--pictures lime tooltip" title="Lime. Why not?">
+                                <i class="fa fa-check" aria-hidden="true"></i>
                                 <input type="checkbox" name="ingredients" class="ingredient" value="lime" id="lime">
                                 <img src="img/lime.png" alt="hot sauce image">
                             </div>
@@ -113,10 +131,20 @@
                         <ul class="ingredientsList "></ul>
                     </section>
                 </div>
-                <section class="calorieBox">
+                <div class="messageWrapper">
+                <section class="raccoon">
+                    <img src="img/raccoon2.png" alt="" class="tooltip" title="Do you have something for me?">
+                    <p>Don't like your burrito? The raccoon will take it! Click here!</p>
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                </section>
+
+
+
+                <section class="calorieBox">                   
                    <h2>Calorie Meter</h2>
                    <span class="calorieMeter">0</span>
                 </section>
+                </div>
             </main> <!-- end of main menu-->
             <footer>
                 <p>Created by Meagan and Clyde</p>
@@ -125,6 +153,8 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src="js/tooltipster.bundle.min.js"></script>
+        <!-- <script src="js/tooltipster.core.min.js"></script> -->
         <script src="js/main.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

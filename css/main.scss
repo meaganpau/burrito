@@ -121,6 +121,7 @@ $color-bk-green:#9BC53D;
 $color-bk-blue:#5BC0EB;
 $color-bk-purple:#995D81;
 $color-bk-yellow:#FFBC42;
+$color-grey:#BFCCBF;
 
 h1, h2, h3, p {
     margin:0;
@@ -150,19 +151,7 @@ body {
     margin:0 auto;
 }
 
-@media (max-width: 900px) {
-    .wrapper {
-        width: 90%;
-        padding-top: 2rem;
-    }
-}
 
-@media (max-width: 600px) {
-    .wrapper {
-        width: 95%;
-        padding-top: 1rem;
-    }
-}
 
 .menu {
     width:100%;
@@ -207,18 +196,45 @@ body {
     border-bottom: 1rem solid rgb(0,50,0);
     border-top: 1rem solid rgb(0,50,0);
     border-left: 1rem solid rgb(0,50,0);
+    
     label {
         width: 20%;
         margin:1%;
     }
     .ingredients__box--pictures {
         border-radius:50%;
+        transition:background-color .4s ease;
+        position:relative;
+        
         img {
             width:100%;
+            transform:scale(1) translate3d(0,0,-1);
+            transition: all .4s ease;
+
         }
     }
 }
 
+.ingredients__box i {
+    font-size:5rem;
+    color:white;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    opacity:0;
+    transition:opacity .4s ease;
+    z-index:10000;
+    text-shadow: 2px 2px rgba(0,0,0,0.1);
+}
+
+.ingredients__box--pictures:hover{
+    cursor:pointer;
+    background-color: $color-grey;
+    img {
+        transform:scale(1.2) translate3d(0,0,0);
+    }
+                                }
 @media (max-width: 800px) {
     .ingredients__box label {
         width:29%;
@@ -235,7 +251,7 @@ body {
     font-size: calc(1rem + 1vw);
     background-color:rgb(0,50,0);
     width:50%;
-    box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.2);
+   
     h4 { //Invitation text
         font-size: calc(1rem + 2vw);
         transform: rotate(-3deg);
@@ -275,14 +291,46 @@ body {
     font-weight: lighter;
 }
 
+
+.messageWrapper {width:100%;
+     background-color:$color-bk-secondary;
+     display:flex;
+     flex-wrap:no-wrap;
+}
+
+.raccoon {width:50%;
+    img {
+        width: 30%;
+        min-width:120px;
+        margin-left:4%;
+        margin-right:2%;
+        float:left;
+        cursor:pointer;
+        transition: 1s;
+        &:hover {
+            transform: rotate(-5deg);
+        }
+    }
+    p {
+        margin-top:1rem;
+        color:$color-bk-main;
+        font-family:$font-sub;
+        padding:0;   
+    }
+    i {
+        font-size:3rem;
+        color: $color-bk-main;
+    }
+}
 .calorieBox {
-    padding:1.5rem 0;
+    padding:1rem 0;
     text-align:center;
     color:$color-bk-main;
     font-family: $font-sub;
     font-size: calc(1rem + 1vw);
     background-color:$color-bk-secondary;
-    box-shadow: 0 -.4rem 1rem 0 rgba(0,0,0,.2);
+    // box-shadow: 0 -.4rem 1rem 0 rgba(0,0,0,.2);
+    width:50%;
 }
 
 .tortilla {
@@ -327,6 +375,29 @@ footer {
     padding: 2rem 0;
     color: $color-logo;
     font-family: $font-sub;
+}
+
+
+
+@media (max-width: 900px) {
+    .wrapper {
+        width: 90%;
+        padding-top: 2rem;
+    }
+    
+    .ingredients__box--pictures i {font-size:3.75rem;}
+    .raccoon i {display:none;}
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+        padding-top: 1rem;
+    }
+    
+    .ingredients__box--pictures i {font-size:2.75rem;}
+    .raccoon p,
+    .raccoon i {display:none;}
 }
 
 

@@ -1,5 +1,13 @@
 $(function () {
 
+$('.tooltip').tooltipster({
+   animation: 'grow',
+   delay: 200,
+   theme: 'tooltipster-noir',
+   side: 'bottom',
+   
+});
+
 var burrito = {
 	ingredients: {
 		lettuce: {
@@ -75,7 +83,10 @@ var burrito = {
 
 	},
 	removeIngredient: function (ingredient) {
+		console.log('I am passing in:' + ingredient);
+
 		var ingredientInfo = burrito.ingredients[ingredient];
+		console.log(ingredientInfo['calories']);
 		burrito.burritoCalories -= ingredientInfo['calories'];
 		var index = burrito.ingredientsList.indexOf(ingredientInfo['name']); //Required to find index # for splicing
 		burrito.ingredientsList.splice(index,1);
@@ -106,11 +117,12 @@ $('.ingredient').change(function() {
 	var selectedIngredient = $(this).val();
 	if (this.checked){
 		burrito.addIngredient(selectedIngredient);
-		$(this).siblings().css('opacity',.5);
+		$(this).prev().css('opacity',1);
+
 	}
 	else{
 	    burrito.removeIngredient(selectedIngredient);
-	    $(this).siblings().css('opacity',1);
+	    $(this).prev().css('opacity',0);
 	}
 	updateView();
 	var half = Math.ceil(burrito.ingredientsList.length/2);
@@ -118,6 +130,16 @@ $('.ingredient').change(function() {
 		$('li:nth-of-type('+i+')').css('text-align', 'right');
 	}
 }); //end click function
+
+$('.raccoon img').on('click', function(){
+burrito.ingredientsList=[];
+burrito.burritoCalories = 0;
+$('.ingredients__box i').css('opacity',0);
+$('input:checkbox').removeAttr('checked');
+updateView();
+
+});
+
 
 
 }); //End of document ready
