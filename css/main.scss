@@ -34,6 +34,29 @@ html {
     text-shadow: none;
 }
 
+
+a:link {
+    font-size: 1rem;
+    font-weight:600;
+    text-decoration: none;
+    }
+a:visited {
+    font-size:1rem;
+    font-weight:600;
+    text-decoration: none;
+    }
+a:hover {
+    font-size:1rem;
+    font-weight:600;
+    text-decoration: none;
+    }
+a:active {
+    font-size:1rem;
+    font-weight:600;
+    text-decoration: none;
+    }
+
+
 /*
  * A better looking default horizontal rule
  */
@@ -251,6 +274,7 @@ body {
     font-size: calc(1rem + 1vw);
     background-color:rgb(0,50,0);
     width:50%;
+    position:relative;
    
     h4 { //Invitation text
         font-size: calc(1rem + 2vw);
@@ -276,6 +300,36 @@ body {
             color: white;
         }
     }
+    .tweet{
+        position:absolute;
+        right:0;
+        bottom:0;
+        
+        background-color:$color-logo-shadow;
+        width:90%;
+        margin-right:5%;
+        border-radius:15px 15px 0 0;
+        border-top:3px solid $color-logo;
+        border-left:3px solid $color-logo;
+        border-right:3px solid $color-logo;
+        transition:background-color .35s ease, color .35s ease, border .35s ease;
+        a{
+            color:#fff;
+            font-size:1.5rem;
+            display:block;
+            width:100%;
+        }
+        i {
+            padding:0 1rem;
+        }
+        &:hover {
+            background-color: $color-bk-blue;
+            border-top:3px solid #fff;
+            border-left:3px solid #fff;
+            border-right:3px solid #fff;
+            }
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -283,7 +337,12 @@ body {
         -moz-column-gap: 20px;
         -webkit-column-gap: 20px;
         column-gap: 20px;
+        
     }
+    .messageBox .tweet a {font-size:1.2rem;
+                       
+                                            } 
+
 }
 
 .noIngredients {
@@ -308,7 +367,7 @@ body {
         cursor:pointer;
         transition: 1s;
         &:hover {
-            transform: rotate(-5deg);
+            transform: rotate(-5deg) translate3d(0,0,0);
         }
     }
     p {
@@ -375,6 +434,13 @@ footer {
     padding: 2rem 0;
     color: $color-logo;
     font-family: $font-sub;
+
+    a{color: $color-logo;
+      transition:color .35s ease;
+    &:hover{
+        color:$color-logo-shadow;
+    }
+    }
 }
 
 
@@ -398,6 +464,19 @@ footer {
     .ingredients__box--pictures i {font-size:2.75rem;}
     .raccoon p,
     .raccoon i {display:none;}
+
+    .messageBox .tweet {background-color:transparent;
+                        border:none;
+                        text-align:right;
+                        margin-top:0;
+                        span{display:none;}
+                        i {color:$color-bk-blue;
+                        font-size:2.5rem;
+
+                        }
+                        &:hover{background-color:transparent;
+                                border:none}
+                        }
 }
 
 

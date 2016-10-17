@@ -31,6 +31,30 @@ html {
   text-shadow: none;
 }
 
+a:link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:visited {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:active {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 /*
  * A better looking default horizontal rule
  */
@@ -226,6 +250,7 @@ body {
   font-size: calc(1rem + 1vw);
   background-color: #003200;
   width: 50%;
+  position: relative;
 }
 
 .messageBox h4 {
@@ -255,11 +280,46 @@ body {
   color: white;
 }
 
+.messageBox .tweet {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #4b0c0a;
+  width: 90%;
+  margin-right: 5%;
+  border-radius: 15px 15px 0 0;
+  border-top: 3px solid #a41a17;
+  border-left: 3px solid #a41a17;
+  border-right: 3px solid #a41a17;
+  transition: background-color .35s ease, color .35s ease, border .35s ease;
+}
+
+.messageBox .tweet a {
+  color: #fff;
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+}
+
+.messageBox .tweet i {
+  padding: 0 1rem;
+}
+
+.messageBox .tweet:hover {
+  background-color: #5BC0EB;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
 @media (max-width: 800px) {
   .messageBox ul {
     -moz-column-gap: 20px;
     -webkit-column-gap: 20px;
     column-gap: 20px;
+  }
+  .messageBox .tweet a {
+    font-size: 1.2rem;
   }
 }
 
@@ -290,7 +350,7 @@ body {
 }
 
 .raccoon img:hover {
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) translate3d(0, 0, 0);
 }
 
 .raccoon p {
@@ -370,6 +430,15 @@ footer {
   font-family: "Lato", sans-serif;
 }
 
+footer a {
+  color: #a41a17;
+  transition: color .35s ease;
+}
+
+footer a:hover {
+  color: #4b0c0a;
+}
+
 @media (max-width: 900px) {
   .wrapper {
     width: 90%;
@@ -394,6 +463,23 @@ footer {
   .raccoon p,
   .raccoon i {
     display: none;
+  }
+  .messageBox .tweet {
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    margin-top: 0;
+  }
+  .messageBox .tweet span {
+    display: none;
+  }
+  .messageBox .tweet i {
+    color: #5BC0EB;
+    font-size: 2.5rem;
+  }
+  .messageBox .tweet:hover {
+    background-color: transparent;
+    border: none;
   }
 }
 
