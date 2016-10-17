@@ -153,7 +153,7 @@ updateView();
 
 $('.tweet').on('mouseenter',function(){
 
- var twitter__message = (`https://twitter.com/intent/tweet?text=Anyone wanna share a ${burrito.burritoCalories} calorie burrito? Made a tasty one on Burrito Tinder!`);
+ var twitter__message = (`https://twitter.com/intent/tweet?text=Anyone wanna share a ${burrito.burritoCalories} calorie burrito? Make a tasty one on Burrito Tinder! http://burritotinder.club`);
  document.getElementById("tweet").setAttribute("href", twitter__message);
 });
 
