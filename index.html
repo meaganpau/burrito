@@ -2,6 +2,14 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
+        <script>
+            // Sets the page's base URL at runtime so relative asset paths
+            // (css/main.css, img/x.png, etc.) resolve correctly whether
+            // this is served at its own root (local dev, the Vercel
+            // preview URL) or proxied under /burrito/ in production
+            // (meaganpau.com/burrito via meaganpau-portfolio's rewrites).
+            document.write('<base href="' + (location.pathname.indexOf('/burrito') === 0 ? '/burrito/' : '/') + '">');
+        </script>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Burrito Tinder</title>
         <meta name="description" content="">
